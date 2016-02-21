@@ -1,0 +1,60 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/font-awesome.min.css",
+			"css/mui.min.css",
+			"fonts/fontawesome-webfont.woff",
+			"rili.html"
+		],
+		"refer": [
+			"bus.html",
+			"rili.html",
+			"tools.html",
+			"about.html",
+			"menu.html"
+		]
+	},
+	"rili.html": {
+		"resources": [
+			"js/rili.js",
+			"css/main.css",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"tools.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"about.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"menu.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"img/120x120.png",
+			"plus/about.html"
+		],
+		"refer": [
+			"plus/about.html"
+		]
+	},
+	"plus/about.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf"
+		]
+	}
+}

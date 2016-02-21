@@ -1,0 +1,135 @@
+.left-menu{
+	background-image: url(../img/background-img.jpg);
+}
+.rili{
+	/*background-image: url(../img/123.jpg);*/
+	/*background: #31A9A5;*/
+	background-color: #f6f6f6;
+	height: 470px;
+}
+.rili-header{
+	padding-top: 30px;
+	padding-left: 15px;
+	height: 70px;
+	background-color: #31a9a5;
+	font-family: "微软雅黑";
+}
+.rili-yue{
+	color: #FFFFFF;
+	font-size: 30px;
+}
+.rili-yue a{
+	color: #FFFFFF;
+}
+.rili-nian{
+	color: #FFFFFF;
+	font-size: 14px;
+}
+.today{
+	float: right;
+	margin-right: 30px;
+	color: #31A9A5;
+	
+}
+.yuan{
+	display: block;
+	width: 30px;
+	height: 30px;
+	font-size: 15px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #FFFFFF;
+	border-radius: 20px;
+}
+.rili-main-header{
+	color: #b4b4b4;
+	list-style: none;
+	display: block;
+	padding-left: 0px;
+	margin: 0px;
+}
+.rili-main-header .title{
+	float: left;
+	width: 14%;
+	height: 24px;
+	font-size: 10px;
+	line-height: 22px;
+	font-family: "微软雅黑";
+	text-align: center;
+}
+.rili-main-main{
+	list-style: none;
+	display: block;
+	height: 325px;
+	padding-left: 0px;
+}
+.rili-main-day-1{
+	float: left;
+	width: 14%;
+	height: 48px;
+	padding-top: 10px;
+	color: #333333;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	text-align: center;
+}
+.rili-main-day-0{
+	float: left;
+	width: 14%;
+	height: 48px;
+	padding-top: 10px;
+	color: #adadad;
+/*	color: #333333;*/
+	font-family: "微软雅黑";
+	font-size: 18px;
+	text-align: center;
+}
+.rili-tian{
+	display: block;
+	line-height: 20px;
+}
+.rili-dangtian{
+	color:#ffffff;
+	background-color: #31a9a5;
+}
+.rili-nongli{
+	display: block;
+	color: #adadad;
+	height: 12px;
+	line-height: 12px;
+	font-size: 10px;
+	text-align: center;
+}
+.top-color-1{
+	border-bottom: 1px solid #FF0000;//黄色
+}
+.top-color-2{
+	border-bottom: 1px solid #0062CC;//蓝色
+}
+.top-color-3{
+	border-bottom: 1px solid #2AC845;//绿色
+}
+.shuoming{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #ADADAD;
+	padding-left: 20px;
+}
+
+/*
+ * ========================================================================================
+ * 公共提示模块
+ * */
+/*底部菜单栏*/	
+.bar-color{
+	background-color: #31A9A5;
+}
+.bar-color .mui-tab-item{
+	color: #fffFFF;
+	
+}
+.mui-bar .mui-tab-item.mui-active{
+	color: #FF7F27;
+}
+ *公交重构 
+ */

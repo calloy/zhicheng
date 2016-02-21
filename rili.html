@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+</head>
+<body>
+	<div class="mui-content">
+		<div class="mui-col-xs-12 rili">
+			<div class="rili-header">
+				<a id="riqi">
+					<span class="rili-yue" id="yue">11月</span>
+					<span class="rili-nian" id="nian">2015年</span>
+				</a>
+				<a href="#today" class="today" id="today">
+					<span class="yuan">今</span>
+				</a>
+			</div>
+			<ul class="rili-main-header">
+				<li class="title">一</li>
+				<li class="title">二</li>
+				<li class="title">三</li>
+				<li class="title">四</li>
+				<li class="title">五</li>
+				<li class="title">六</li>
+				<li class="title">日</li>
+			</ul>
+			<ol class="rili-main-main" id="day" data=""></ol>			
+			<div class="shuoming">
+				红，蓝，绿三色用于标注倒班中白班，夜班，休息三个阶段。
+			</div>
+		</div>	
+	</div>
+	<script src="js/mui.min.js"></script>
+	<script src="js/rili.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="UTF-8">
+	    var day = new Date();
+		var m = day.getMonth();
+  		var y = day.getFullYear();
+  		var yy = document.getElementById("yue");
+  		var nn = document.getElementById('nian');
+      	mui.init();
+  		mui.ready(function(){
+  			yy.innerHTML= (m+1) + "月";
+  			nn.innerHTML = y + "年";
+			rili(day.getFullYear(),day.getMonth(),day.getDate()); 
+//						rili(2015,5,1); 
+  		});
+      	mui.init();
+      	mui.plusReady(function(){
+      		//右滑事件
+  			document.getElementById("day").addEventListener("swiperight",function(){
+  				//得到左滑 上一个月显示
+  				m = m - 1;
+  				if(m < 0){
+  					m = 11;
+  					y = y - 1;
+  				}
+  				var yy = document.getElementById("yue");
+  				var nn = document.getElementById('nian');
+  				yy.innerHTML= (m+1) + "月";
+  				nn.innerHTML = y + "年";
+				rili(y,m,day.getDate()); 
+  			});
+  			//左滑事件
+  			document.getElementById("day").addEventListener("swipeleft",function(){
+  				//得到左滑 上一个月显示
+				m = m + 1;
+  				if(m > 11){
+  					m = 0;
+  					y = y + 1;
+  				}
+  				var yy = document.getElementById("yue");
+  				var nn = document.getElementById('nian');
+  				yy.innerHTML= (m+1) + "月";
+  				nn.innerHTML = y + "年";
+				rili(y,m,day.getDate()); 
+  			});  	
+  			//返回今天
+  			document.getElementById("today").addEventListener("tap",function(){
+  				y = day.getFullYear();
+  				m = day.getMonth();
+  				var yy = document.getElementById("yue");
+  				var nn = document.getElementById('nian');
+  				yy.innerHTML= (m + 1) + "月";
+  				nn.innerHTML = y + "年";
+  				rili(day.getFullYear(),day.getMonth(),day.getDate());
+  			});
+  			//头部时间更改
+  			document.getElementById("riqi").addEventListener("tap",function(){
+  				plus.nativeUI.pickDate(function(e){
+  					var d = e.date;
+  					var yy = document.getElementById("yue");
+	  				var nn = document.getElementById('nian');
+	  				yy.innerHTML= (d.getMonth()+1) + "月";
+	  				nn.innerHTML = d.getFullYear() + "年";
+  					rili(d.getFullYear(),d.getMonth(),d.getDate());
+  				},function(e){
+  					console.log("未选择日期"+ e.message);
+  				});
+  			});
+      	});
+    </script>
+</body>
+</html>
